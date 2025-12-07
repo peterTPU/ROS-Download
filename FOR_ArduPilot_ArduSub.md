@@ -53,6 +53,20 @@ cd ~/ardupilot
 ```
 
 ### Configure and Build
+### Check the SUB form this : https://www.ardusub.com/developers/developers.html
+## Waf is a global build system for ArduPilot repository, it's necessary to be inside the root folder of ArduPilot to use it. You can check how to use waf with:
+```bash
+./waf --help
+```
+## To configure waf to build ArduSub for Pixhawk 1:
+```bash
+./waf configure --board Pixhawk1
+```
+## And to compile:
+```bash
+./waf sub
+```
+## for test
 ```bash
 ./waf configure --board sitl
 ./waf sub
