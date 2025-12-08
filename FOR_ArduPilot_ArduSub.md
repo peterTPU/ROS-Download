@@ -72,8 +72,7 @@ cd ~/ardupilot
 ./waf sub
 ```
 
-```
-##### for test your SITL
+# 📝 ArduSub Setup Test SITL QGC
 ### Terminal 1
 ```bash
 cd ~/ardupilot
