@@ -1,5 +1,5 @@
 
-# 📝 ArduSub Setup Guide for Ubuntu 20.04  
+# 📝 ArduSub Setup Guide for Ubuntu 20.04 and ROS1  
 *For ROV/Submarine Simulation with SITL*
 
 This guide walks you through downloading, building, and testing **ArduSub** — the ArduPilot firmware for underwater vehicles (ROVs/submarines) — on **Ubuntu 20.04** using **Software-In-The-Loop (SITL)** simulation.
@@ -10,14 +10,16 @@ This guide walks you through downloading, building, and testing **ArduSub** — 
 
 ## 🛠️ Step-by-Step Installation
 
-### 1. **Clone the ArduPilot Repository**
+### 1. **Clone the ArduPilot Repository for this place link:https://github.com/ArduPilot/ardupilot.git **
 ```bash
 git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot/
 ```
 
 ### 2. **Initialize Submodules**
+## You First to be in Ardupilot file in Your Linux Ubuntu
 ```bash
+cd ardupilot/
 git submodule update --init --recursive
 ```
 
@@ -62,27 +64,41 @@ cd ~/ardupilot
 # for test SITL
 ```bash
 ./waf configure --board sitl --notests --disable-tests
+./waf sub
 ```
 # for connection with Real Robot (SUB)
 ```bash
 ./waf configure --board Pixhawk1
-```
-
-## And to compile:
-```bash
-./waf sub
-```
-## for test
-```bash
-./waf configure --board sitl
 ./waf sub
 ```
 
-> ✅ This compiles the **ArduSub** firmware for simulation.
+## for test your SITL
+# Terminal 1
+```bash
+cd ~/ardupilot
+./Tools/autotest/sim_vehicle.py -v ArduSub -L RATBeach
+```
+## Note here you need to see black window for ArduSub and check that have not Error!
+
+# Terminal 2
+```bash
+roslaunch mavros apm.launch fcu_url:=udp://0.0.0.0:14550@
+```
+# Terminal 3
+# you need to run QGC by commed
+```bash
+# where will be you file you need to make
+chmod +x ./QGroundControl.AppImage
+ls # you need to see the name of ./QGroundControl.AppImage green
+./QGroundControl.AppImage 
+```
+
+> ✅ This compiles the **ArduSub** firmware for simulation to test the SITL without Gazebo.
 
 ---
 
-## ▶️ Test with SITL Simulator
+## ▶️ Test with SITL Simulator with Gazebo
+# NOTE: !!!!
 
 Use the official test script to launch ArduSub with a **6-DOF vectored ROV frame** (supports vertical, lateral, and rotational thrusters — ideal for advanced submarines):
 
