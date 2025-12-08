@@ -12,7 +12,7 @@ This guide walks you through downloading, building, and testing **ArduSub** — 
 
 ### 1. **Clone the ArduPilot Repository**
 ```bash
-git clone [git@github.com:ArduPilot/ardupilot.git](https://github.com/Williangalvani/ardupilot.git)
+git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot/
 ```
 
@@ -25,7 +25,7 @@ git submodule update --init --recursive
 > ⚠️ Note: The correct script path is `Tools/scripts/install_prereqs.sh` (not `environment_install`).
 
 ```bash
-Tools/scripts/install_prereqs.sh -y
+Tools/environment_install/install-prereqs-ubuntu.sh -y
 source ~/.profile
 ```
 
