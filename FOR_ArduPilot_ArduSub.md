@@ -72,19 +72,20 @@ cd ~/ardupilot
 ./waf sub
 ```
 
-### for test your SITL
-# Terminal 1
+```
+##### for test your SITL
+### Terminal 1
 ```bash
 cd ~/ardupilot
 ./Tools/autotest/sim_vehicle.py -v ArduSub -L RATBeach
 ```
 ## Note here you need to see black window for ArduSub and check that have not Error!
 
-# Terminal 2
+### Terminal 2
 ```bash
 roslaunch mavros apm.launch fcu_url:=udp://0.0.0.0:14550@
 ```
-# Terminal 3
+### Terminal 3
 # you need to run QGC by commed
 ```bash
 # where will be you file you need to make
