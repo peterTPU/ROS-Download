@@ -12,9 +12,8 @@ This guide walks you through downloading, building, and testing **ArduSub** — 
 
 ### 1. **Clone the ArduPilot Repository**
 ```bash
-git clone git@github.com:ArduPilot/ardupilot.git
+git clone [git@github.com:ArduPilot/ardupilot.git](https://github.com/Williangalvani/ardupilot.git)
 cd ardupilot/
-git checkout Sub-3.5
 ```
 
 ### 2. **Initialize Submodules**
