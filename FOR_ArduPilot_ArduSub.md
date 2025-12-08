@@ -72,7 +72,7 @@ cd ~/ardupilot
 ./waf sub
 ```
 
-## for test your SITL
+### for test your SITL
 # Terminal 1
 ```bash
 cd ~/ardupilot
