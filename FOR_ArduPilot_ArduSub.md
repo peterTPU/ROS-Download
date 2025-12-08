@@ -59,9 +59,15 @@ cd ~/ardupilot
 ./waf --help
 ```
 ## To configure waf to build ArduSub for Pixhawk 1:
+# for test SITL
+```bash
+./waf configure --board sitl --notests --disable-tests
+```
+# for connection with Real Robot (SUB)
 ```bash
 ./waf configure --board Pixhawk1
 ```
+
 ## And to compile:
 ```bash
 ./waf sub
