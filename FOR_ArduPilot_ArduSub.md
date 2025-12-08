@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 ### 3. **Install System Dependencies**
 > ⚠️ Note: The correct script path is `Tools/scripts/install_prereqs.sh` (not `environment_install`).
-
+> ⚠️ Note: You need to open your VPN if you in Ru
 ```bash
 Tools/environment_install/install-prereqs-ubuntu.sh -y
 source ~/.profile
