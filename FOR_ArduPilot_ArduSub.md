@@ -301,7 +301,7 @@ Use the official test script to launch ArduSub with a **6-DOF vectored ROV frame
 1. Download [QGroundControl](https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html)
 2. Launch it — it will **automatically connect** to the SITL instance
 3. Arm and control your virtual ROV using virtual joysticks or RC input
-4. Solve problem of run SITL ArduSub and improtant link information and github is here: Problem and Solve information for  STL_ArduSub.md
+4. Solve problem of run SITL ArduSub and improtant link information and github is here: [Problem and Solve information for  STL_ArduSub.md](https://github.com/peterTPU/ROS-Download/blob/main/Problem%20and%20Solve%20information%20for%20%20STL_ArduSub.md)
 
 ---
 
